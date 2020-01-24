@@ -1,44 +1,34 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
+    <v-toolbar app>
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-toolbar-title>Sistema de Certificados</v-toolbar-title>
       <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>open_in_new</v-icon>
+      <v-btn color="success" outlined>Ingresar
+        <v-icon right>how_to_reg</v-icon>
       </v-btn>
-    </v-app-bar>
+      <v-btn color="error" outlined>Salir
+        <v-icon right>directions_walk</v-icon>
+      </v-btn>
+    </v-toolbar>
+
+    <v-navigation-drawer app v-model="drawer" dark temporary>
+      <v-layout mt-4 column align-center>
+        <v-flex>
+          <v-avatar>
+            <v-img src="https://media-exp1.licdn.com/dms/image/C4E03AQFFzIl3pZ48UQ/profile-displayphoto-shrink_200_200/0?e=1584576000&v=beta&t=tP1LFmtC_zNRk0_g5yRTWjAp0KxBER3hkamiDW_DtFU">
+            </v-img>
+          </v-avatar>
+        </v-flex>
+        <v-flex>
+          <p class="white--text mt-3 headline">Bill Jherson Ttimpo</p>
+        </v-flex>
+      </v-layout>
+    </v-navigation-drawer>
 
     <v-content>
-      <router-view></router-view>
+      <router-view></router-view><!-- Aquí va todo el contenido dinámico -->
     </v-content>
   </v-app>
 </template>
@@ -46,10 +36,9 @@
 <script>
 
 export default {
-  name: 'App',
-
+  name: "App",
   data: () => ({
-    //
+    drawer: true,
   }),
 };
 </script>

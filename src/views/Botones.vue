@@ -15,7 +15,7 @@
                     <v-icon>favorite</v-icon>
                 </v-btn>
                 
-                <v-btn flat icon>
+                <v-btn flab icon>
                     <v-icon color="orange">add_circle</v-icon>
                 </v-btn>
 

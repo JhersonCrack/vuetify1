@@ -11,7 +11,7 @@
         </v-layout>
 
         <v-layout success>
-            <v-flex info xs2 style="height: 700px pl-1">
+            <v-flex info xs2 style="pl-1">
                 <h1 class=title>Página principal</h1>
                 <h1 class=title>Tendencias</h1>
                 <h1 class=title>Supscripciones</h1>
