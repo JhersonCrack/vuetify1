@@ -1,17 +1,22 @@
 <template>
   <v-app>
-
-    <v-toolbar app>
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Sistema de Certificados</v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn color="success" outlined>Ingresar
-        <v-icon right>how_to_reg</v-icon>
-      </v-btn>
-      <v-btn color="error" outlined>Salir
-        <v-icon right>directions_walk</v-icon>
-      </v-btn>
-    </v-toolbar>
+      <v-card
+      color="grey lighten-4"
+      flat
+      tile
+    >
+      <v-toolbar dense app>
+        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+        <v-toolbar-title>Vuetify</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-btn color="success" outlined>Ingresar
+          <v-icon right>how_to_reg</v-icon>
+        </v-btn>
+        <v-btn color="error" outlined>Salir
+          <v-icon right>directions_walk</v-icon>
+        </v-btn>
+      </v-toolbar>
+    </v-card>
 
     <v-navigation-drawer app v-model="drawer" dark temporary>
       <v-layout mt-4 column align-center>
@@ -38,7 +43,7 @@
 export default {
   name: "App",
   data: () => ({
-    drawer: true,
+    drawer: false,
   }),
 };
 </script>
