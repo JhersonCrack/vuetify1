@@ -145,7 +145,7 @@
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, amet tempora! Iure, ducimus. Quasi expedita odit quisquam, placeat repudiandae quibusdam deserunt blanditiis vel debitis, obcaecati iste libero ad numquam quae.
                     </v-card-text>
                     <v-card-action>
-                        <v-btn error flat>Action</v-btn>
+                        <v-btn @click="dialog = true" flat>Action</v-btn>
                     </v-card-action>
                 </v-card>
             </v-flex>
@@ -160,18 +160,35 @@
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, amet tempora! Iure, ducimus. Quasi expedita odit quisquam, placeat repudiandae quibusdam deserunt blanditiis vel debitis, obcaecati iste libero ad numquam quae.
                     </v-card-text>
                     <v-card-action>
-                        <v-btn success flat>Action</v-btn>
+                        <v-btn @click="dialog = true" flat>Action</v-btn>
                     </v-card-action>
                 </v-card>
             </v-flex>
         </v-layout>
-    </v-container>
 
+        <!-- Aquí va el dialog -->
+        <v-dialog v-model="dialog" persistent="">
+            <v-card>
+                <v-card-title>Este el título del modal</v-card-title>
+                <v-card-text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui id asperiores eaque incidunt, reprehenderit fugiat vel error libero assumenda unde, accusamus minus tempore alias quo odio numquam dolores. Iure, ab?</v-card-text>
+                <v-divider></v-divider>
+                <v-card-actions>
+                    <v-btn @click="dialog = false">Cerrar</v-btn>
+                </v-card-actions>
+            </v-card>
+        </v-dialog>
+        <!-- Fin del dialog -->
+
+    </v-container>
 </template>
 
 <script>
 
 export default {
-
+    data(){
+        return{
+            dialog:false,
+        }
+    }
 }
 </script>
