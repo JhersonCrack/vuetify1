@@ -167,7 +167,7 @@
         </v-layout>
 
         <!-- Aquí va el dialog -->
-        <v-dialog v-model="dialog" persistent="">
+        <v-dialog v-model="dialog" persistent>
             <v-card>
                 <v-card-title>Este el título del modal</v-card-title>
                 <v-card-text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui id asperiores eaque incidunt, reprehenderit fugiat vel error libero assumenda unde, accusamus minus tempore alias quo odio numquam dolores. Iure, ab?</v-card-text>

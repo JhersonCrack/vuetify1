@@ -20,6 +20,11 @@ const routes = [
     name: 'botones',
     component: () => import('../views/Botones.vue')
   },
+  {
+    path: '/tareas',
+    name: 'tareas',
+    component: () => import('../views/Tareas.vue')
+  },
 ]
 
 const router = new VueRouter({

@@ -5,7 +5,7 @@
       flat
       tile
     >
-      <v-toolbar dense app>
+      <v-toolbar dense>
         <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
         <v-toolbar-title>Vuetify</v-toolbar-title>
         <v-spacer></v-spacer>
